@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shawn | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#0f0f1a,#1b1b2f,#16213e);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:white;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,#6c5ce7,transparent 60%);
+    filter:blur(120px);
+    animation:float 8s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translate(-20%,-20%);}
+    50%{transform:translate(20%,20%);}
+}
+
+.card{
+    position:relative;
+    width:90%;
+    max-width:750px;
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 25px 50px rgba(0,0,0,.5);
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid #74b9ff;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:3rem;
+    background:linear-gradient(90deg,#a29bfe,#74b9ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    color:#cfd8ff;
+    margin-bottom:25px;
+}
+
+.bio{
+    line-height:1.7;
+    opacity:.9;
+    margin-bottom:35px;
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.skill{
+    padding:10px 18px;
+    border-radius:50px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#6c5ce7,#00cec9);
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(108,92,231,.4);
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,206,201,.5);
+}
+
+footer{
+    margin-top:40px;
+    opacity:.6;
+    font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    
+    <img src="Logo.png" alt="Profile Picture" class="avatar">
+
+    <h1>Shawn</h1>
+
+    <p class="subtitle">
+        Programmer • Roblox Developer • Python Developer • I like pngs
+    </p>
+
+    <p class="bio">
+        HIIIIIII! I am Shawny, I am a developer, I enjoy coding as a hobby, and I wish to work for big companys as IT.
+        I Shawn, have good intentions on projects, if I care about a project I will work on it/ Update it constantly.
+        I very much dislike users, who hack projects to be annoying/Users who delete progress.
+        my Favorite coding language so far, is python.
+    </p>
+
+    <div class="skills">
+        <div class="skill">Luau</div>
+        <div class="skill">Python</div>
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">C#</div> 
+        <div class="skill">Modeling kinda</div>
+        <div class="skill">Unity mods/Vr mods</div>
+    </div>
+
+    <div class="buttons">
+        <a href="projects.html" class="btn">My Projects</a>
+        <a href="https://github.com/YourUsername" class="btn" target="_blank">GitHub</a>
+        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">Discord</a>
+    </div>
+
+    <footer>
+         Year: I think 30907 Shawn • umm I spend very hard work because html and css is very annoying
+    </footer>
+
+</div>
+
+</body>
+</html>
