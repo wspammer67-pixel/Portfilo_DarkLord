@@ -13,35 +13,37 @@
     box-sizing:border-box;
     font-family:'Segoe UI',sans-serif;
 }
+
 body{
     min-height:100vh;
     background:linear-gradient(135deg,#0f0f1a,#1b1b2f,#16213e);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    overflow-y:auto;
     color:white;
-    overflow-x:auto;
-    overflow-y:hidden;
+    padding:20px;
 }
-
 body::before{
     content:"";
-    position:fixed;
+    position:absolute;
     width:700px;
     height:700px;
     background:radial-gradient(circle,#6c5ce7,transparent 60%);
     filter:blur(120px);
     animation:float 8s ease-in-out infinite;
-    z-index:-1;
 }
 
 @keyframes float{
     0%,100%{transform:translate(-20%,-20%);}
     50%{transform:translate(20%,20%);}
 }
+
 .card{
     position:relative;
-    flex:0 0 620px;
-    max-width:620px;
-    min-height:750px;
-
+    width:90%;
+    max-width:750px;
     backdrop-filter:blur(20px);
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.1);
@@ -49,8 +51,7 @@ body::before{
     padding:50px;
     text-align:center;
     box-shadow:0 25px 50px rgba(0,0,0,.5);
-
-    scroll-snap-align:center;
+    animation:fadeIn 1s ease;
 }
 
 @keyframes fadeIn{
@@ -118,11 +119,11 @@ h1{
 .btn{
     text-decoration:none;
     color:white;
-    padding:25px 35px;
+    padding:15px 35px;
     border-radius:50px;
-    background:linear-gradient(108deg,#6c5ce7,#00cec9);
+    background:linear-gradient(180deg,#6c5ce7,#00cec9);
     transition:.3s;
-    box-shadow:0 10px 25px rgba(108,180,50,.4);
+    box-shadow:0 10px 25px rgba(108,92,231,.4);
 }
 
 .btn:hover{
@@ -130,59 +131,16 @@ h1{
     box-shadow:0 15px 35px rgba(0,206,201,.5);
 }
 
-.footer{
+footer{
     margin-top:40px;
     opacity:.6;
     font-size:.9rem;
 }
-
-    
-.cards-container{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    height:100vh;
-    padding:40px;
-    overflow-x:auto;
-    overflow-y:hidden;
-
-    scroll-snap-type:x mandatory;
-    scroll-behavior:smooth;
-}
-
-cards-container::-webkit-scrollbar{
-    height:10px;
-}
-
-cards-container::-webkit-scrollbar-thumb{
-    background:#6c5ce7;
-    border-radius:20px;
-}
-
-.card{
-    flex:0 0 650px;     
-    max-width:650px;
-    min-height:750px;
-
-    scroll-snap-align:center;
-}
-
 </style>
 </head>
 
 <body>
 
-
-<body>
-
-<div class="cards-container">
-    
-</body>
-</html>
-
-
-<div class="cards-container">
-    
 <div class="card">
    
 
@@ -210,7 +168,9 @@ cards-container::-webkit-scrollbar-thumb{
     My favorite programming language is Python.
     </p>
 
-    
+    <p class="bio">
+    My favorite programming language is Python.
+    </p>
 
     <p class="bio">
     Public Discord: <strong>black_knight1.0</strong>
@@ -224,7 +184,7 @@ cards-container::-webkit-scrollbar-thumb{
     <div class="skills">
         <div class="skill">Luau</div>
         <div class="skill">Python</div>
-        
+        <box-icon type='logo' name='python'></box-icon>
         <div class="skill">HTML/CSS</div>
         <div class="skill">C#</div> 
         <div class="skill">Modeling kinda</div>
@@ -233,11 +193,11 @@ cards-container::-webkit-scrollbar-thumb{
     </div>
 
     <div class="buttons">
-        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a> 
-        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a> 
-        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a> 
-        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a> 
-        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a> 
+        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a>
+        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a>
+        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a>
+        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a>
+        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a>
         
     </div>
 
@@ -247,285 +207,6 @@ cards-container::-webkit-scrollbar-thumb{
     </footer>
 
 </div>
-    
-    <div class="card">
-   
-
-    
-    <img src="Logo.png" alt="    Not Working" class="avatar">
-
-
-    <p class="subtitle">
-        Extra
-    </p>
-
-    <p class="bio">
-    Other Bio /Ignore
-    </p>
-    I like Minecraft
-    </p>
-
-    </p>
-    I dislike and like roblox
-    </p>
-
-    </p>
-    I hate Trump, I hate Ice.
-    </p>
-
-    </p>
-    I like Vr
-    </p>
-
-    </p>
-    I have a Meta Quest 3
-    </p>
-
-    </p>
-    Meta Quest 3s Sucks
-    </p>
-
-    
-    <div class="buttons">
-        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a> 
-        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a> 
-        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a> 
-        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a> 
-        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a> 
-        
-    </div>
-    
-    
-
-    <div class="skills">
-        <div class="skill">Playing Minecraft</div>
-        <div class="skill">Plaing Vr</div>
-        <div class="skill">Playing Animal Company</div>
-        <div class="skill">Animal Company PVP</div> 
-        <div class="skill">Pvp/PVE Games</div>
-        <div class="skill">playing Bonelab</div>
-        
-    </div>
-
-    
-
-    <footer>
-       Just For fun
-        
-    </footer>
-
-    
-    <div class="card">
-   
-
-    
-    <img src="Logo.png" alt="    Not Working" class="avatar">
-
-
-    <p class="subtitle">
-        Shawny's Extra Page
-    </p>
-
-    <p class="bio">
-    Watching Ryan Trahan 24/7
-    </p>
-    I Hate Annoying Kids
-    </p>
-
-    </p>
-    I am a minor, so back off
-    </p>
-
-    </p>
-    I like watching camman18
-    </p>
-
-    </p>
-    2nd Fav youtuber is PrestonPlayz
-    </p>
-
-    </p>
-    I have a Mini Pc
-    </p>
-
-    </p>
-    My pc is Bmax mini pc b1 pro.
-    </p>
-
-    
-    <div class="buttons">
-        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a> 
-        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a> 
-        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a> 
-        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a> 
-        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a> 
-        
-    </div>
-    
-
-    <div class="skills">
-        <div class="skill">My favorite youtube is Ryan Trahan</div>
-        <div class="skill">I don't tolerate bullying</div>
-        <div class="skill">I hate bullys</div>
-        <div class="skill">I like fighting/ irl</div> 
-        <div class="skill">I like engineering</div>
-        <div class="skill">Not Good at making friends</div>
-        
-    </div>
-
-    
-
-    <footer>
-       Just For fun
-        
-    </footer>
-
-    
-    <div class="card">
-   
-
-    
-    <img src="Logo.png" alt="    Not Working" class="avatar">
-
-
-    <p class="subtitle">
-        Shawny's Extra Page
-    </p>
-
-    <p class="bio">
-    Self-taught developer who enjoys building websites, Python applications, and Roblox experiences.
-</p>
-
-<p>🐍 Primary Language: Python</p>
-<p>🌐 Learning Full-Stack Web Development</p>
-<p>🎮 Roblox Developer (Luau)</p>
-<p>🤖 Building Discord Bots & Automation</p>
-<p>💻 Currently Learning C# & C++</p>
-<p>🛠️ Interested in Backend Development & APIs</p>
-<p>🚀 Always working on new personal projects</p>
-<p>📚 Always learning new technologies</p>
-
-    
-    <div class="buttons">
-        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a> 
-        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a> 
-        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a> 
-        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a> 
-        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a> 
-        
-    </div>
-    
-
-    <div class="skills">
-    <div class="skill">🐍 Python Developer</div>
-    <div class="skill">🌐 HTML, CSS & JavaScript</div>
-    <div class="skill">🎮 Roblox Luau Scripting</div>
-    <div class="skill">🤖 Discord Bot Development</div>
-    <div class="skill">🖥️ Flask Web Development</div>
-    <div class="skill">💻 C# Beginner</div>
-    <div class="skill">⚡ C++ Learning</div>
-    <div class="skill">🔒 API & Authentication Systems</div>
-    <div class="skill">📂 Git & GitHub</div>
-    <div class="skill">🎨 UI/UX Design</div>
-    <div class="skill">🛠️ Debugging & Problem Solving</div>
-    <div class="skill">🚀 Always Learning New Technologies</div>
-    </div>
-
-    
-
-    <footer>
-       Just For fun
-        
-    </footer>
-
-</div>
 
 </body>
 </html>
-
-    <div class="card">
-
-    <h2 class="title">🚀 My Projects</h2>
-
-    <div class="buttons">
-        <a href="https://github.com/wspammer67-pixel?tab=repositories" class="btn">[W] My Projects</a> 
-        <a href="https://github.com/wspammer67-pixel" class="btn" target="_blank">[W] GitHub</a> 
-        <a href="https://discord.gg/W8Zyg4Qmbx" class="btn" target="_blank">[W] Discord Server</a> 
-        <a href="https://www.youtube.com/@Black_knight1.0" class="btn" target="_blank">[W] Youtube</a> 
-        <a href="https://open.spotify.com/user/31mickzu4juhamvniuebcszqhibe" class="btn" target="_blank">[W] Spotify</a> 
-        
-    </div>
-    
-    <p class="bio">
-        A collection of projects I've built while learning programming and software development.
-    </p>
-
-    
-
-    <div class="skills">
-
-        <div class="skill">
-            🖥️ Scar OS v2 – A custom desktop environment built with Python & Tkinter.
-        </div>
-
-        <div class="skill">
-            🌐 Personal Portfolio Website – Responsive portfolio made with HTML, CSS & JavaScript.
-        </div>
-
-        <div class="skill">
-            🤖 Discord Moderation Bot – Python bot with moderation commands, XP, economy, logging, and auto moderation.
-        </div>
-
-        <div class="skill">
-            🎮 Roblox Systems – Luau modules including admin tools, verification, ban systems, and UI.
-        </div>
-
-        <div class="skill">
-            🔐 Authentication API – Flask backend with encrypted authentication tokens and key validation.
-        </div>
-
-        <div class="skill">
-            🚀 Rocket Game – 2D Python/Pygame game with animations, sound effects, and menus.
-        </div>
-
-        <div class="skill">
-            📁 File Scanner – Python application that scans files for suspicious content.
-        </div>
-
-        <div class="skill">
-            💻 C++ Learning Projects – Console applications while learning modern C++.
-        </div>
-
-        <div class="skill">
-            🌍 Flask Web Applications – Backend websites and REST APIs using Flask.
-        </div>
-
-        <div class="skill">
-            🎨 UI Design Experiments – Modern cards, dashboards, and responsive web interfaces.
-        </div>
-
-        
-
-    </div>
-
-    <footer>
-        More projects coming soon...
-    </footer>
-
-    </div>
-
-    
-
-
-
-    
-
-
-
-
-
-    
-
-    
-    
-
