@@ -36,11 +36,12 @@ body::before{
     0%,100%{transform:translate(-20%,-20%);}
     50%{transform:translate(20%,20%);}
 }
-
 .card{
     position:relative;
-    width:90%;
-    max-width:750px;
+    flex:0 0 620px;
+    max-width:620px;
+    min-height:750px;
+
     backdrop-filter:blur(20px);
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.1);
@@ -48,7 +49,8 @@ body::before{
     padding:50px;
     text-align:center;
     box-shadow:0 25px 50px rgba(0,0,0,.5);
-    animation:fadeIn 1s ease;
+
+    scroll-snap-align:center;
 }
 
 @keyframes fadeIn{
@@ -128,14 +130,14 @@ h1{
     box-shadow:0 15px 35px rgba(0,206,201,.5);
 }
 
-footer{
+.footer{
     margin-top:40px;
     opacity:.6;
     font-size:.9rem;
 }
 
     
-cards-container{
+.cards-container{
     display:flex;
     align-items:center;
     gap:30px;
@@ -148,26 +150,37 @@ cards-container{
     scroll-behavior:smooth;
 }
 
-.cards-container::-webkit-scrollbar{
+cards-container::-webkit-scrollbar{
     height:10px;
 }
 
-.cards-container::-webkit-scrollbar-thumb{
+cards-container::-webkit-scrollbar-thumb{
     background:#6c5ce7;
     border-radius:20px;
 }
 
 .card{
-    flex:0 0 650px;     /* smaller than before */
+    flex:0 0 650px;     
     max-width:650px;
     min-height:750px;
 
     scroll-snap-align:center;
 }
+
 </style>
 </head>
 
 <body>
+
+
+<body>
+
+<div class="cards-container">
+    
+</body>
+</html>
+
+
 <div class="cards-container">
     
 <div class="card">
@@ -234,11 +247,7 @@ cards-container{
     </footer>
 
 </div>
-
-</body>
-</html>
-
-
+    
 <div class="card">
    
 
@@ -305,18 +314,7 @@ cards-container{
         
     </footer>
 
-</div>
-
-</body>
-</html>
-
-
-</div>
-
-</body>
-</html>
-
-
+    
 <div class="card">
    
 
@@ -382,11 +380,7 @@ cards-container{
         
     </footer>
 
-</div>
-
-</body>
-</html>
-
+    
 <div class="card">
    
 
@@ -522,6 +516,23 @@ cards-container{
 
     
 </div>
+
+</div>
+
+    
+
+    
+
+</div>
+
+
+
+    
+
+
+
+
+
     
 
     
