@@ -13,26 +13,23 @@
     box-sizing:border-box;
     font-family:'Segoe UI',sans-serif;
 }
-
 body{
     min-height:100vh;
     background:linear-gradient(135deg,#0f0f1a,#1b1b2f,#16213e);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow-x:hidden;
-    overflow-y:auto;
     color:white;
-    padding:20px;
+    overflow-x:auto;
+    overflow-y:hidden;
 }
+
 body::before{
     content:"";
-    position:absolute;
+    position:fixed;
     width:700px;
     height:700px;
     background:radial-gradient(circle,#6c5ce7,transparent 60%);
     filter:blur(120px);
     animation:float 8s ease-in-out infinite;
+    z-index:-1;
 }
 
 @keyframes float{
@@ -136,11 +133,65 @@ footer{
     opacity:.6;
     font-size:.9rem;
 }
+@media (max-width:768px){
+
+    body{
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
+    .cards-container{
+        display:flex;
+        flex-direction:column;
+        height:auto;
+        overflow:visible;
+        padding:20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:600px;
+        min-height:auto;
+        margin-bottom:20px;
+    }
+
+}
+    
+cards-container{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    height:100vh;
+    padding:40px;
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+}
+
+.cards-container::-webkit-scrollbar{
+    height:10px;
+}
+
+.cards-container::-webkit-scrollbar-thumb{
+    background:#6c5ce7;
+    border-radius:20px;
+}
+
+.card{
+    flex:0 0 650px;     /* smaller than before */
+    max-width:650px;
+    min-height:750px;
+
+    scroll-snap-align:center;
+}
 </style>
 </head>
 
 <body>
-
+<div class="cards-container">
+    
 <div class="card">
    
 
@@ -490,4 +541,11 @@ footer{
     </footer>
 
 </div>
+
+    
+</div>
+    
+
+    
+    
 
